@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: rgb(0, 136, 255);
+            
+        }
+        .box{
+            background-color: green;
+            width: 250px;
+            height: 250px;
+            position: relative;
+            animation-name:harry1 ;
+            /* animation-name: harry2; */
+            animation-duration: 2s;
+            animation-iteration-count: 3;
+            /* animation-fill-mode: alternate; */
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in;
+            /* animation-timing-function: ease-in-out; */
+            /* animation-timing-function: ease-out; */
+            /* animation-delay: 3s; */
+            /* animation-direction: reverse; */
+            /* these properties can be set as shorthand  */
+
+            /* animation: -name -duartion - timing functon -delay -interaction count -fill mode; */
+            /* animation: harry1 5s ease-in 1s 1 backwards; */
+        }
+         @keyframes harry1 {
+            from{
+                width: 400px;
+            }
+            to{
+                width: 800px;
+            }
+        }
+        /* @keyframes harry2{
+            0%{
+                top: 0px;
+                left: 0px;
+            }
+            25%{
+                top: 233px;
+                left: 0px;
+            }
+            75%{
+                top: 233px ;
+                left: 233px;
+            }
+            100%{
+                top: 0px;
+                left: 233px;
+            }
+        } */ 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"> this is a box Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, iure.\</div>
+    </div>
+</body>
+</html>

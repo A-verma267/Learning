@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Events</title>
+    <style>
+        .child{
+            color: rgb(66, 1, 1);
+            padding: 14px;
+            margin: 14px;
+            background-color: rgb(172, 139, 95);
+            border: 2px solid black;
+            cursor: pointer;
+
+        }
+        .child .btn{
+            cursor: pointer;
+
+        }
+        .childcontainer{
+            padding: 14px;
+            margin: 14px;
+            background-color: rgb(104, 69, 24);
+            border: 2px solid black;
+            cursor: pointer;
+
+        }
+        .container{
+            padding: 14px;
+            margin: 14px;
+            background-color: rgb(41, 23, 0);
+            border: 2px solid black;
+                        cursor: pointer;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="childcontainer">
+            <div class="child">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, rem necessitatibus. Non facilis eaque quia ex blanditiis vero illo ducimus iusto, deserunt numquam perspiciatis architecto cupiditate eos totam ad nostrum deleniti possimus quam dolore, aut laudantium illum. Ipsa fugit sapiente nisi quidem dolore, expedita eaque?</p>
+                <p id="para" style="display: none;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, rem necessitatibus. Non facilis eaque quia ex blanditiis vero illo ducimus iusto, deserunt numquam perspiciatis architecto cupiditate eos totam ad nostrum deleniti possimus quam dolore, aut laudantium illum. Ipsa fugit sapiente nisi quidem dolore, expedita eaque?</p>
+            <button class="btn">Read more </button>
+            </div>
+            
+            <script>
+
+
+                // Browser events :
+                //  click , dblclick , contextmenu , keydown and keyup 
+
+
+                // let btn = document.getElementsByClassName("btn");
+                // let p= document.getElementById("para");
+                // btn[0].addEventListener("contextmenu",()=>{
+                //     // alert("Beware about the malware");
+                //     if(p.style.display !="block"){
+                //         p.style.display="block";
+                //         btn[0].innerHTML="Read Less";
+                //     }
+                //     else{
+                //         p.style.display="none";
+                //         btn[0].innerHTML="Read More ";
+                //     }
+
+                // })
+
+                // Events Bubbling
+
+                let child = document.getElementsByClassName("child");
+
+                child[0].addEventListener("click",()=>{
+                    
+                    alert("the child was clicked");
+                })
+                let childc = document.getElementsByClassName("childcontainer");
+                childc[0].addEventListener("click",()=>{
+                    alert("the childcontainer was clicked");
+                })
+                let container = document.getElementsByClassName("container");
+                container[0].addEventListener("click",()=>{
+                    alert("the container was clicked");
+                })
+                
+                </script>
+        </div>
+    </div>
+</body>
+</html>

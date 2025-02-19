@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .card{
+            padding: 23px 12px ;
+            margin: 23px 12px ;
+            border: 2px solid red;
+            background-color: burlywood;
+            /* box shadow: offset-x offset-y color;
+            box shadow : offset-x offse-y blur radius color;
+            box shadow : offset-x offset-y blur radius spread radius color ; */
+            box-shadow: 10px 13px rgb(0, 0, 0) ;
+            box-shadow: -10px -13px rgb(0, 0, 0);
+            box-shadow: 7px 5px 10px rgb(0, 0, 0);
+            box-shadow: -7px -5px 10px rgb(0, 0, 0);
+            box-shadow: -7px -5px 10px 5px rgb(0, 0, 0);
+            box-shadow: -7px -5px 10px 5px rgba(0, 0, 0, 0.5); /* a define the bluriness of the colour */
+
+            /* box-shadow: inset 3px 5px rgb(0, 0, 0); */
+            /* box-shadow: inset -4px -5px black; */
+            /* box-shadow: 3px 5px 5px 3px rgb(118, 118, 118) , 4px 6px 10px 5px rgb(0, 0, 0); */
+        }
+         .card h2{
+            color: rgb(89, 89, 89);
+            text-shadow: 3px 4px rgb(255, 255, 255);
+            text-shadow: 3px 2px 2px;
+             /*this is a spread radius white;*/
+            text-shadow: -3px -2px 2px white ;
+        } 
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card1">
+            <h2> hello this is the heading 2 </h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt facere porro voluptatem ea quos enim officia totam iure ipsum fuga, iste esse nulla velit facilis quasi mollitia quidem nobis architecto similique minima nihil tempore blanditiis? Explicabo maiores facilis expedita fuga.</p>
+        </div>
+        <div class="card" id="card2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum id nesciunt harum nobis doloremque animi sequi earum nemo magni! Recusandae tenetur eius at, ratione dignissimos, amet nostrum mollitia, nihil ad minus laborum distinctio?</div>
+        <div class="card" id="card3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto tenetur quia voluptatem quas nostrum accusantium. Natus vero quisquam reiciendis voluptas voluptatum iure adipisci necessitatibus optio pariatur mollitia odit sint delectus error, dolor a!</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Functions</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 2, 3, 4, 5];
+        
+        arr[0] = 2;
+        cosnole.log(arr);
+
+        console.log(arr.length);
+        console.log(typeof (arr)); //---> return object 
+
+        // convert aray to string 
+        console.log(arr.toString());
+
+        // join the array by -
+        console.log(arr.join('-'));
+
+
+        // return the length of the array 
+
+
+        // remove the last item of the array 
+        console.log(arr.pop());
+
+        // remove the first item of the array 
+        console.log(arr.shift());
+
+        // add the item to the last of the array 
+        console.log(arr.push(9));
+
+        // add the item to the first index of the array 
+        console.log(arr.unshift(10))
+
+        d=[6,7,8,8,8,9];
+// it delete the value at the index of the array d
+        delete d[1];
+        console.log(d);
+
+        console.log(arr.concat(d));
+        console.log(arr.sort());
+
+        // splice( position to add , no of element remvove , elements to be added... )
+        arr.splice(2,1,23,24);
+        console.log(arr);
+
+        // return the array from the given starting index to the ending index and return the new array 
+        console.log(arr.slice(2))
+
+        console.log(arr);
+        console.log(arr.reverse());
+
+        // map()
+
+        const a = [1,2,3,4,5];
+        a.map((e)=>{
+            return e*e;
+
+        })
+        console.log(a);
+
+        // fliter()
+
+        // reduce()
+        function multiply(a,b){
+            return a*b;
+        }
+        let m = a.reduce(multiply);
+        console.log(m)
+
+        // to create the array form any object 
+        let s = Array.from("harryy");
+        console.log(s);
+
+        
+        
+    </script>
+</body>
+
+</html>

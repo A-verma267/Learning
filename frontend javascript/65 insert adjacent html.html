@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box red yellow ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque quos magnam facere.</div>
+    </div>
+    <script>
+
+        document.body.insertAdjacentHTML("beforebegin","<p> hey </p>");
+
+        document.body.insertAdjacentHTML("beforeend","<p> hey </p>");
+
+        document.body.insertAdjacentHTML("afterend","<p> hey </p>");
+
+        document.body.insertAdjacentHTML("afterbegin","<p> hey </p>");
+
+        
+        // <html lang="en">
+        // <head>...</head>
+        // <p>hey </p>  //beforebegin
+        // <body>
+        //     <p>hey </p> // afterbegin
+        //     <div class="container">...</div>
+        //     <p>hey </p>  //beforeend
+        // </body>
+        // <p>hey </p> // afterend
+        // </html>
+
+        document.body.firstElementChild.remove();
+        // this js code help to remove any tag from the html 
+
+        //below js return the lsit of all the classes that present in the tag 
+        document.body.firstElementChild.firstElementChild.classList;
+        // DOMTokenList(3) ['box', 'red', 'yellow', value: 'box red yellow ']
+
+        //this return the class name 
+        document.body.firstElementChild.firstElementChild.className;
+        // 'box red yellow '
+
+        //this will add the class in the preexisting class of the tag 
+        document.body.firstElementChild.firstElementChild.classList.add("close");
+        
+
+        // this will remove the close class from the tag
+        document.body.firstElementChild.firstElementChild.classList.remove("close");
+        
+
+        // this will check whether the class is present in the tag or not 
+        document.body.firstElementChild.firstElementChild.classList.contains("close");
+        // false
+
+        
+        // this js will toggle the class if the tag contain  the class then it remove it an d if it is not contains then add it to the tag .. it will add any same class name single type not the multiple type 
+        document.body.firstElementChild.firstElementChild.classList.toggle("close");
+        // true
+        document.body.firstElementChild.firstElementChild.classList.toggle("red");
+        // false
+
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fonts and different ways of color </title>
+    <style>
+        p{
+            font-family: 'Courier New', Courier, monospace;    /* font familye that works like if oneis not present 
+            then 2nd will be the font colour */
+
+            font-size: 33px;
+            line-height: 1.3em;
+
+
+        }
+        span{
+            font-weight: bold;
+            font-style: italic ;
+
+        }
+        #firstpara{
+            color: red;     /*colouring with initializing the colour */
+        }
+        #secondpara{
+            color: rgb(116, 136, 58);    /*coloring the content with the rgb 0 to 250*/
+        }
+        #thirdpara{
+            color: #ffffff;     /*color in hexa form of rgb */
+        }
+    </style>
+</head>
+<body>
+    <!--
+        web safe fonts -> that are preinstalled in most of operating system 
+        wb fonts -> that we have to find from the websites by linking it in the file 
+        web stack -> list of all th e fonts that if one is not available  the we have other options
+
+        web fonts can be include in the file by importing it from google fonts website by copy paste and adding fonnt in the font family 
+
+    -->
+    <h1> css fonts </h1>
+    <p>hey <span> font </span> bye bye </p>
+
+    <h2> different way of colouring the content and the background colour </h2>
+
+    <p id="firstpara">
+        this the first paragraph......
+    </p>
+
+    <div id="secondpara">
+        this is my second paragraph........
+    </div>
+
+    <strong id="thirdpara">
+        this is the third paragraph......
+    </strong>
+
+
+
+</body>
+</html>

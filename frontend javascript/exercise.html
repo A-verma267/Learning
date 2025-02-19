@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">click me</button><button class="btn">click me</button><button class="btn">click me</button>
+    <script>
+        let btn = document.getElementsByClassName("btn");
+        btn[0].addEventListener("click",()=>{
+            alert("your first button is clicked ")
+        })
+        btn[1].addEventListener("click",()=>{
+            alert("your second button is clicked ")
+        })
+        btn[2].addEventListener("click",()=>{
+            alert("your third button is clicked ")
+        })
+    </script>
+</body>
+</html>

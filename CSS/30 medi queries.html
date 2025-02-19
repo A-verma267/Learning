@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            color: white;
+            background-color: red;
+            font-size: 22px ;
+            text-align: center;
+            display: none;
+            /* height: 100px; */
+            
+        }
+        @media(max-width:300px){
+            #box1{
+                display: block;
+                background-color: cyan;
+                
+            }
+        }
+        @media(min-width:300px )and (max-width:500px){
+            #box2{
+                display: block;
+                background-color: violet;
+
+            }
+        }
+        @media(min-width: 500px )and (max-width:800px ){
+            #box3{
+                color: black;
+                display: block;
+                background-color: yellow;
+            }
+        }
+        @media(min-width:800px){
+            #box4{
+                color: aliceblue;
+                background-color: rgb(22, 43, 61);
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">first WELCOME TO OUR FIRST MEDIA QUERIES Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio reprehenderit possimus odio ullam minima.</div>
+    <div class="box" id="box2">second  welcome to our second media queries Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed quisquam nemo atque temporibus ut?</div>
+    <div class="box" id="box3">third welcome to our hird media queries Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil temporibus consequatur doloribus labore fuga!</div>
+    <div class="box" id="box4">fourth welcome to our fourth media queries Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita in laborum nihil maxime sapiente.</div>
+</body>
+</html>

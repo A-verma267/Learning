@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var let const and conditionals</title>       
+</head>
+<body>
+    <script>
+
+        //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        // *var variable can be initialized as well declare as many time as user want 
+        // *let variable can be initialize after the declaring it once a time 
+        // *const variable can neither be declare  and initialize after the one time declaration 
+        //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+        var string1=" this is a variable";
+        var string1=" this is another variable";
+        // we can easily change the value of any variavle if its datatype is var but we can not change it in let and const;;
+        let a="u";//--> global variable ;
+        // let a= 23;
+
+        //let a="u6"; --> this will show the error as a is already been declared;;
+         // but for defining the local variable we use
+         {
+            let a="u6"; // this will not show any error because it has only existence/scope in this particular block or we can say that there is no existence of the identifier out of this block;;
+            console.log(a);
+
+         }
+         console.log(a);  // local variable desn't affect the global variable ;
+        //  same thing is apply with const datatype of identifier ;
+        const b= "hey  this is const data type identifier this can't be changed ";
+        // b= " if we wanna to change it it will give the error ";
+
+        // further move to the conditionals 
+
+        // there are three type of conditionals :
+         
+        // if (condition is true){
+        //     then this stAtement is print ;;
+        // }
+
+        // elseif(condition is true ){
+        //     this statement is print if if stateemnt is false ;;
+        // }
+
+        // else(no any condition){
+        //     this will gonna print when there is no true if statement ;;
+        // }
+        let name = "harry ";
+        if(name=="harry"){
+            console.log("your name is correct");
+
+        }
+        else if(name=="rohan"){
+            console.log("you are not eligible for it ")
+        }
+        else{
+            console.log("your are not eleigible ");
+
+        }
+
+        let age=10;
+        if(age>18){
+            console.log("you are eligible");
+        }
+        
+
+        else{
+            console.log("you are not eligible ");
+        }
+
+        switch (age) {
+            case 4:
+                console.log("You have to follow your parents rule")
+                break;
+            case 10:
+                console.log("You have to follow your govt rule ");
+                break;
+            case 18:
+                console.log("you can make your own rules");
+                break;
+            case 34:
+                console.log("you have to follow your wife's rule");
+
+        
+            default:
+                break;
+             
+            // if break statement is not present in cases then if one if true then it execcute the all other cases that written under that case that's why we use the break in all cases as well as defaults
+            
+        }
+    </script>
+</body>
+</html>

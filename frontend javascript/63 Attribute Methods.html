@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Methods</title>
+    
+</head>
+<body>
+    <h2 style="color: red;">Lorem ipsum dolor sit amet.</h2>
+    <h3>Lorem ipsum dolor sit amet.</h3>
+    <script>
+        console.log(document.body.firstElementChild.hasAttribute("style")); // this will only return the value true when the attritube is added in inline not as a internal css 
+        console.log(document.body.children[1].setAttribute("style"," color : blue; font-size : 32px;")); // this will add the style attribute in the inline css where the color is blue and fontsize is 32px;
+        console.log(document.body.firstElementChild.getAttribute("style"));
+        //  this will return the properties thayt is present in the style attribute
+        console.log(document.body.firstElementChild.removeAttribute("style"));
+        // this code will remove the style attribute form the h2 tag ;
+         console.log(document.body.children[1].attributes);
+         // this will return the collection of all the attributes that is applied on the second children of the body;
+         
+    </script>
+</body>
+</html>

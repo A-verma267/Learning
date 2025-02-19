@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try and catch </title>
+</head>
+
+<body>
+    <script>
+        let a = prompt("Enter the first number");//return the value in string type 
+        let b = prompt("Enter the second number");
+
+        if (isNaN(a) || isNaN(b)) {
+            throw SyntaxError("this is not considerable you have to input the valid numbers");
+        }
+
+        let sum = parseInt(a) + parseInt(b);
+        function main() {
+
+            try {
+                console.log("the sum of two number is :-", sum*x);
+                return true;
+            }
+            catch (err) {
+                console.log("you should firstly define the value of x ");
+                return false;
+                // console.log(error);// it will give the reference error !
+                // alert(err.name);
+                // alert(err.message);
+                // alert(err.stack);
+            }
+            finally {
+                console.log("this is the finally statement ");
+            }
+        }
+
+        let c = main();
+        console.log(c);
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

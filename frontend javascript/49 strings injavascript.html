@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings in javascript</title>
+</head>
+<body>
+    <div class="conatiner">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
+        <div id="content">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ea recusandae molestiae necessitatibus adipisci dolores, tenetur praesentium inventore ducimus itaque dignissimos autem doloremque officiis blanditiis? Provident illum eligendi cumque. Modi quibusdam consectetur corrupti nobis assumenda sapiente nemo nostrum quaerat nulla.</p>
+        </div>
+    </div>
+    <script>
+        var string="harry";
+        var string='He knows"me ';
+        var name="Harry";
+        var channel="Code with Harry";
+        var message ="Harry is a good boy";
+        var temp=`${name} is a 'nice'person "and " he has a channel called ${channel}`; 
+
+        console.log(string+name+message);
+        console.log(temp);
+        var len= name.length; // this is the way to calculate the length of the string 
+// both lines gonna give the same output 
+        console.log("Lengtth of the  name is :- "+ len);
+        console.log(`Length of naame is :-- ${len}`);
+        // now we gonna study bout the escape sequenece 
+        console.log("Hello \\n World \n Harry \t and ");
+        // var y= new String("this");//another way to make a string
+        // console.log(y);
+        document.getElementById('content').innerHTML=" <h3> this is an h3 heading </h3>" // using this we can change the content  in the html easily by excessing it through either id , class or any selector ;;
+ 
+
+
+        var name="Harry";
+        var message="how are you doing bro ?";
+        var greet="good morning";
+        var temp=`${greet} ${name} ${message}`;
+        console.log(temp);
+
+        var len=name.length;
+
+        var y = new String("this is a new string")
+        console.log(y);
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #firstpara{
+            background-color: rgb(255, 0, 0);
+            height: 100px;
+            width : 455px;
+            border-width: 4px;
+            border-color: rgb(34, 250, 250);
+            border-style: solid; 
+             border-radius: 11px;
+
+            /*if we want to write above 3 line in one line then we can write lke this */
+            /* border: 4px solid black;  html takes this satement to color the border  */
+
+        }
+        #secondpara{
+            background-color: rgb(58,243,98);
+            height: 100px;
+            width: 455px;
+            border-top: 2px solid blue;
+            border-right:4px solid violet;
+            border-left: 6px solid rgb(81, 69, 69);
+            border-bottom: 8px solid lavender;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 7px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 9px;
+
+        }
+        #thirdpara{        /*learn how to import the external files */
+            height: 500px;
+            width: 400px;
+            
+            border : 2px solid goldenrod;
+           
+
+        }
+        #contaiener{
+            display: flex;
+        }
+        #box{
+            height: 250px;
+            width: 350px;
+            background-color: orangered;
+            border: 2px solid black;
+            margin: 12px;
+            transition: all 1s ease-in-out .3s;
+        }
+        .box1:hover{
+            border-radius: 72px;
+        }
+        .box2:hover{
+            border-radius: 52px 104px;
+        }
+        .box3:hover{
+            border-radius: 64px 96px 128px 32px ;
+        }
+        .box4:hover{
+            border-radius: 50%;
+        }
+        .box5:hover{
+            border-radius: 40%  20% / 10% 30%;
+        }
+    </style>
+</head>
+<body>
+    <p id="firstpara">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi eveniet laboriosam architecto? Eum molestias omnis quas harum officia explicabo repudiandae facilis inventore beatae doloremque? Tempora beatae eaque deserunt omnis voluptas nisi ad hic natus, porro pariatur dolor eligendi architecto dolore modi. Accusantium voluptates in animi?
+    </p>
+    <p id="secondpara">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem neque sunt doloribus commodi libero nam quod, assumenda a voluptas vitae qui non veritatis, iste iusto. Ullam, eum voluptate dolorum nisi sint necessitatibus in, sed, corrupti porro nobis minus corporis voluptatum itaque doloribus error nihil dolores?
+    </p>
+    <p id="thirdpara">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur labore quis reiciendis amet libero veniam facere possimus blanditiis, aperiam porro dignissimos. Suscipit nesciunt, labore aperiam reiciendis voluptate excepturi sapiente? Necessitatibus ab vel ratione, nisi molestiae hic dolores officia, dignissimos ex, facere qui eaque exercitationem itaque.
+    </p>
+
+    <!-- Demonstration of the different border styles:
+
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;} -->
+
+<!-- multiiple type of border radius  -->
+<div id="contaiener">
+    <div id="box" class="box1"></div>
+    <div id="box" class="box2"></div>
+    <div id="box" class="box3"></div>
+    <div id="box" class="box4"></div>
+    <div id="box" class="box5"></div>
+</div>
+
+</body>
+</html>

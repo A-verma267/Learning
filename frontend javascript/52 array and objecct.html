@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array and object</title>
+</head>
+<body>
+    <script>
+        // Array --> array is an object which contain the element of diiferent type of datetypes.
+        // object --> is the collection of element in key-value pair 
+        let names=[12, 33,'harry',34.55];
+        // another way to create an array ::
+        let names1 = new Array(12,13,14.5,"harry");
+        console.log("this is an first array "+ names);
+        console.log("this is the second array "+ names1);
+
+        // by usinh following steps we can access the element of an array;;
+        console.log(names[0]);
+        console.log(names1[3]);
+
+        // to create an array which contain the blank places and of length 23 :--
+        let array =new Array(23);
+
+        // to find the length of an array :--
+        console.log(array.length);
+
+        // to sort the array in the ascending order :--
+        names = names.sort();
+        console.log(names);
+
+        // revers function is use to reverse an array ;
+        names=names.reverse();
+        console.log(names);
+
+        names.push("This is pushed"); // it push the element at the last index of an array ;
+        // name.pop()  not a fuction in js ;;;
+        console.log(names);
+
+        // object are those which are not a primitive type 
+        // primitive type--> integer,string,boolean,null,undefined;
+
+        let employee={
+            name: "harry",
+            salary: 2,
+            channel: "code with harry",
+            "full name": "anshika verma" 
+        };
+        // we can excess the value of key of object emoloyee;
+        console.log(employee.name);
+        console.log(employee.salary);
+
+        console.log(employee["name"]);
+        console.log(employee["full name"]);// this will give the required output but 
+
+        // console.log(employee.full name); --> gives the error ;
+
+
+    </script>
+
+</body>
+</html>

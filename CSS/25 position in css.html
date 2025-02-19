@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            background-color: khaki;
+            height: 3445px;
+
+        }
+        .box{
+            display: inline-block;
+            border: 2px solid red;
+            width: 150px;
+            height: 150px;
+            margin: 2px;
+        }
+        #box3{
+            /* relative: relative to itsnormal position and will leave a gap at its normal position 
+             position: relative; 
+            top: 45px ;
+            left: 34px ;
+            
+
+             absolute: relative to itsparent position 
+             position: absolute; 
+             top: 45px; 
+             to remove a box from its position 
+             display: none; 
+             display: inline-block; 
+             left: 34px; 
+            position fixed is relative to the browser window 
+            position: fixed;
+             top: 4px ; 
+            
+            right: 4px ;
+            bottom: 2px ;
+            font-size: 22px;  */
+             /* sticky is use to stick the element to the position where we want to stick it  */
+            position: sticky;
+            top: 0px ;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+        <div class="box" id="box4"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPs</title>
+</head>
+<body>
+
+    <script>
+        // Prototyping
+
+        let animal = {
+            eat:"true"
+        };
+        let rabbit ={
+            jump:"true"
+        }
+
+        // so now we want that the rabbit is jumping as well eating so inheritance the eat in the rabbit from the animal
+        
+        // how ?
+
+        rabbit.__proto__=animal;
+
+        // we have created the class
+        class Animal{
+            constructor(name){
+                this.name=name;
+                console.log("Object is created");
+            }
+            run(){
+                console.log("the animal is running");
+            }
+            jump(){
+                console.log("the Animal is jumping");
+            }
+            eat(){
+                console.log("the aniamal is eating the  food");
+            }
+        }
+        // we have created an object below :--
+        let a = new Animal("Anshika");
+        console.log(a);
+
+        class lion extends Animal{
+
+            constructor(name){
+                super(name);
+                // this.name=name;
+                console.log("the lion object has been created ");
+            }
+
+            static sMethod(){
+                console.log("hey i am a static Method");
+            }
+            eat(){
+                console.log("The lion is eating his food ");
+                super.eat();// run the parent class console
+            }
+
+            roar(){
+                console.log("The lion is roaring ");
+            }
+        }
+
+        let l= new lion("Harsh");
+        console.log(l);
+        // static Method can't be accessible by every individual from outside 
+        lion.sMethod();
+    </script>
+
+</body>
+</html>

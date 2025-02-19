@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container{
+            display: grid;
+            /* use in to add  gap in between rows and columns  */
+            gap: 1rem;
+            
+            /* these are use for definig the width of column grid  */
+            /* grid-template-columns: 300px 100px 100px; */
+            /* grid-template-columns: 300px auto 100px ; */
+            grid-template-columns: 1fr 4fr 1fr ;
+            /* row-gap: 2rem; */
+            /* column-gap: 2rem; */
+            /* in repeat it define the no of itmes that can present in one row and next define the width of grid */
+            /* grid-template-columns: repeat(5,1fr); */
+            /* grid-template-rows: repeat(2,4fr); */
+
+            /* for defining the row grid we use  */
+            /* grid-template-rows: 1fr 1fr 4fr; */
+            /* grid-auto-rows: 2fr; */
+
+
+        }
+        .items{
+            background-color: red;
+            border: 2px solid black;
+            margin: 13px;
+            padding: 15px 5px;
+
+        }
+        .box{
+            border: 2px solid black;
+            background-color: rgb(245,187,101);
+            padding: 34px;
+        }
+         .box:first-child{
+            /* to increase the width of one column equal to the width of one or more boxed we give the end and start point same for the row as well as the column */
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 5;
+            /* same thing can be written like this  */
+            /* grid-column: 1/span 3; */
+            /* grid-row: 1/span 3; */
+        } 
+    </style>
+</head>
+<body>
+    <!-- css grid is use for he layout design mechanism  
+     further we learn about the syntax of the css grid  -->
+
+     <!-- Cell ke within slign krne ke liye 
+        justify-items / align-items : center ;
+    container/ parent ke within align krne ke liye 
+         justify-content/  align-content : center 
+
+         place-content : center; -->
+
+
+     <div class="container">
+        <!-- .items{this is item-$}*9 + enter give us the 9 div of classes items and item 1 2 3 4 5 6 7 8 9  -->
+        <!-- <div class="items">This is Item-1</div>
+        <div class="items">This is Item-2</div>
+        <div class="items">This is Item-3</div>
+        <div class="items">This is Item-4</div>
+        <div class="items">This is Item-5</div>
+        <div class="items">This is Item-6</div>
+        <div class="items">This is Item-7</div>
+        <div class="items">This is Item-8</div>
+        <div class="items">This is Item-9</div> -->
+        <div class="box">item-1</div>
+        <div class="box">item-2</div>
+        <div class="box">item-3</div>
+        <div class="box">item-4</div>
+        <div class="box">item-5</div>
+        <div class="box">item-6</div>
+        <div class="box">item-7</div>
+        <div class="box">item-8</div>
+        <div class="box">item-9</div>
+        
+
+        Object-fit / Object-position 
+            object-fit:fill;
+            object-fit:cover;
+            object-fit:contain;
+            object-position: top right;
+            object-position : top left ;
+            object-position : bottom right ;
+            object-position : bottom left ;
+            bg-image: url("");
+            bg-repeat : no repeat ;
+            bg-position : center center ;
+        
+        Filter: blur();
+                brightness();
+                contrast();
+                invert();
+                greyscale();
+                opacity();
+                sepia();
+                drop shadow();
+                
+</body>
+</html>

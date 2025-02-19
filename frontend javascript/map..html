@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome in the event listening chapter </h1>
+        <div id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas odit consectetur facilis laborum ullam asperiores veniam nobis. Assumenda provident reiciendis in officiis exercitationem ipsum quidem iste laudantium minima optio mollitia numquam eligendi ipsa distinctio maiores soluta, explicabo dolor atque cum recusandae sapiente non iusto sed? Nobis, nesciunt optio! Quas laudantium quibusdam, temporibus officia consequatur aliquam.</div>
+        <div style="display: none;" id="para2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab numquam, enim ex deserunt accusantium autem itaque molestiae amet accusamus tenetur harum iste perspiciatis inventore ea? Consequatur soluta itaque rem necessitatibus eum incidunt dolorem a voluptates, iusto amet molestias, quas id cupiditate consectetur, quae quia. Distinctio, cumque. Harum neque ipsum facere? Omnis eligendi vel provident enim iste voluptates, odio praesentium quod, in earum incidunt consequatur suscipit.</div>
+        <button onclick="togglehide()" class="btn">Read More</button>
+    </div>
+    <script>
+        function togglehide(){
+            let p= document.getElementById('para1');
+            let p2 = document.getElementById('para2');
+            let btn = document.querySelector('button');
+            if(para2.style.display!="block"){
+                para2.style.display= "block";
+                btn.innerHTML= "Read Less";
+            }
+            else{
+                para2.style.display="none";
+                btn.innerHTML= "Read More";
+
+            }
+
+        }
+    </script>
+</body>
+</html>

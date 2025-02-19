@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Methods</title>
+</head>
+<body>
+    <div class="conatiner">
+        <div class="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem perferendis libero alias!</div>
+        <div class="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta sit consequatur iure.</div>
+    </div>
+    <script>
+        // creating a element using javscript ;
+        let div = document.createElement("div");
+        
+        // assigning the created element a class and an id 
+        div.className = "class";
+        div.id= "hey";
+
+        // adding the html in the div tag 
+        div.innerHTML= "Hey i am div tag that is creates using the javascript code";
+        
+        // now your div tag using the javascript is created 
+        
+        // <div class="class" id="hey">Hey i am div tag that is creates using the javascript code</div>
+        
+        // document.body.firstElementChild.innerHTML=div.innerHTML;
+        
+        // above code add the inner html of the div tag int the bodies firstelement chid ;
+        
+// .........................................................................
+
+        document.body.append(div); 
+        
+        // this will append the div int the end of the body tag i.e ;
+        
+        
+        // <body>
+            //     <div class="conatiner">...</div>
+        //     <script>...<//script>
+            //     <div class="class" id="hey">Hey i am div tag that is creates using the javascript code</div>
+            // </body>
+            
+            
+// .........................................................................
+            
+        document.body.prepend(div);
+            
+        // by using the above code the div tag is adding in the starting of the node (body)
+            
+            
+        // <body>
+            //     <div class="class" id="hey">Hey i am div tag that is creates using the javascript code</div>
+            //     <div class="conatiner">...</div>
+            //     <script>...<//script>
+                    
+// .........................................................................
+                    
+        document.body.before(div);
+
+        // this code of js will add the div tag before the body tag 
+
+
+        // <html lang="en">
+        // <head>...</head>
+        // <div class="class" id="hey">Hey i am div tag that is createsusing the javascript code</div>
+        // <body>...</body>
+        // </html>
+
+//..........................................................................        
+        document.body.after(div);
+
+        // using this js code we add the div tag after the body tag 
+        
+        
+        // <html lang="en">
+        // <head>...</head>
+        // <body>...</body>
+        // <div class="class" id="hey">Hey i am div tag that is createsusing the javascript code</div>
+        // </html>
+ 
+// .........................................................................
+
+        document.body.firstElementChild.replaceWith(div);
+
+        // this js code will replace the bodies firstelement with the div  element 
+
+
+
+    </script>
+</body>
+</html>

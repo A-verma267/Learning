@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in js </title>
+</head>
+<body>
+    <script>
+        console.log("hello hiiiiiiiiiiiiiiiiiiiiii");
+        function greet (name,greeettext ='nice to see here'){
+            //  name ='rahul';
+            console.log(greeettext + ' ' + name);
+            console.log(name + " is a good boy");
+            // its return value is none ;
+
+        }
+        let name="harry";
+        let name1="shubham";
+        let name2= "rohit";
+        let name3="aman";
+        let greeettext="good morning";
+        greet(name,greeettext);
+        greet(name1,greeettext);
+        greet(name2);
+        greet();//if we not pass any argument to parameters then the value of that parameter is undefined..;;
+
+        function sum(a, b){
+            let c = a+b;
+            return c;
+            console.log("here we gonna the output ");
+            // we didn't get the statement that are written after the return statement ;
+        }
+
+        let a=3;
+        let b=5;
+
+        let d = sum(a,b);
+        console.log(`The sum of two numbers ${a} ans ${b} is ` + d);
+
+    </script>
+</body>
+</html>

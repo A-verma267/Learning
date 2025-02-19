@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating DOM</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About </li>
+            <li>Services</li>
+            <li>MORE ABOUT US</li>
+            <li>Contact us</li>
+        </ul>
+    </div>
+    <div class="container">
+        another container
+    </div>
+    <script>
+        let main=document.getElementById("main");  // This lie give us the first line of code where id main is present like line no. 9
+        console.log(main);
+
+        // we can change its inner html with th help of following code :main.innerHtml="<li> Home </li>"
+        let nav=document.getElementById("nav");
+        console.log(nav);
+        // nav.innerHTML="<li> Home </li>"
+
+        let cont=document.getElementsByClassName("container");
+        console.log(cont);
+
+        // cont show in console in the array format , we can access the array element by cont[0] and cont[1]
+        // we can also change the inner html using the cont[0].innerhtml="hey i am changing it "
+        // same goes for the cont[1]
+
+        // let sel=document.querySelector("#nav");
+        // console.log(sel);
+  
+        // it will access only the first li that is present inside the #nav div tag 
+        // let sel=document.querySelector("#nav>li");
+        // console.log(sel);
+
+        // for accessing the all element or the all li that present in the #nav div tag we use:  it return the all li in the array format thatcan be acces through the indexing 
+        // we can change the innerhtml using : sel[0].innerHTML="inserted";
+        let sel=document.querySelectorAll("#nav>li");
+        console.log(sel);
+
+
+    </script>
+</body>
+</html>

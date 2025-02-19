@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function</title>
+</head>
+<body>
+    <div class="container"> thie is the arrow function tutorial </div>
+
+    <script>
+        // function greet(){
+        //     console.log('good morning');
+
+        // }
+        // greet();
+
+        // arrow function
+    //      let greet=()=> {
+    //         console.log("good morning");
+
+    //      }
+    //      greet();
+        let greet=()=> console.log("good morning dear");
+        greet();
+
+        let sum =(a, b)=>{
+            return a+b;
+        }
+        let c= sum(23 , 45);
+        console.log(c);
+
+        let sum1 = a => a/2;
+        console.log(sum1(50));
+
+        let obj1={
+            greeting:"good morning",
+            name:["harry" ," harsh sharma ", " anshika verma ", "krish sharma ","Hardik"],
+            speak(){
+                // here this is us eto excess the name  inside the obj1 
+                this.name.forEach(element => {
+                    // here if the function is the arrow function then using the this we can excess the greeting argument in the object but if it has fuction then it give output as undefined 
+                //     this.name.forEach(function s(element){
+                //     // here if the function is the arrow function then using the this we can excess the greeting argument int eh object bu tif it has fuction then it give output as undefined 
+                //     console.log(this.greeting +" kukdoo kooo " + element);
+
+                // });
+                    console.log(this.greeting +" kukdoo kooo " + element);
+
+                });
+            }
+        }
+        obj1.speak();
+     </script>
+
+</body>
+</html>

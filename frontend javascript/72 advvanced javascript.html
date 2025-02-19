@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(z);// undefined
+        // console.log(g);// error 
+
+        async function sleep(){
+            return new Promise((resolve, reject)=>{
+                setTimeout(() => {
+                    resolve(45);
+                }, 1000);
+            })
+        }
+        // IIFE -> immediately invoke function expression 
+        (async function main(){
+            let a = await sleep();
+            console.log(a);
+            
+            let b = await sleep();
+            console.log(b);
+        })();
+
+        //Destructuring 
+
+        // let x, y=[1,2];
+        // console.log(x,y);
+        // here the x contain the undefined value and y contain the array ;
+        
+        // but if we want the value of x, y from the array 
+        
+        let [x, y]=[1,2];
+        console.log(x,y);
+
+        // let there are multiple value the assigning array and we have two variable and one variable which store the rest of all the element of the array how can we do this :
+
+        let [a,b,...c]=[1,2,3,4,5,6,7];
+        console.log(a,b,c);
+        // here 
+        //     a -> 1;
+        //     b -> 2;
+        //     c -> [3,4,5,6,7]; because of ... this three dots help the variable to store the rest of element of the array
+
+        //Similarly we can destructurise the object :--
+        let obj ={a1:1,b1:2};
+        let {a1,b1}=obj;
+        console.log(a1,b1);
+
+        function sum(a,b,c){
+            return a+b+c;
+        }
+        let arr =[1,2,3];
+        let d = sum(arr[0],arr[1],arr[2]);
+        // spreading array ke arraqy ko khol do;
+
+        let e = sum(...arr);
+
+        console.log(d)
+        console.log(e)
+
+        // object 
+        let obj1={...arr};
+        console.log(obj1);
+        //output->
+        // {0: 1, 1: 2, 2: 3}
+
+        let a2= "the ";
+        let b2 = "no ";
+        let c1 = {a2,b2};
+        console.log(c1);// this return the object 
+
+        // hoisting 
+
+        // agar hm ek varible bnate he or use declare niche krte he and call function starting me kr denge to agr us variable ka type var he to usi value koi bhi declare ho vo output undefined hi dega and agr uska type let ya fr const he to vo error deta ki aap phele us variable to initialize kriye ;
+        // agr hmare variable end of code pr likha hoag or agr hm use call ya fr console kr rhe he to vo var data type hmare variable ko move kr dega at the top of execution 
+
+        var z= 6;// undefined 
+        // let g=6;// error
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: block;
+            width: 233px;
+            margin: auto;
+        }
+        input{
+            display: block;
+        }
+        input[type="text"]{
+            padding: 23px;
+            border: 2px solid red;
+        }
+        a[target]{
+            font-size: 44px;
+            color: violet;
+        }
+        a[target='_self']{
+            font-size: 14px;
+            color: rgb(13,22,151);
+        }
+        input[type='email']{
+            color: yellow;
+            border: 4px solid black;
+        }
+        /* this will apply css for 3rd child */
+        /* li: nth-child(3) {color: cyan } */
+        li:nth-child(2n){
+            color: red;
+        }
+        li:nth-child(3n+3){
+            color: red;
+        }
+        li:nth-child(odd){
+            background-color: yellow;    /* odd child*/
+        }
+        li:nth-child(even){
+            background-color: yellow;  /*even child */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <a target="_blank">Go To Google</a>
+        </h1>
+        <h1>
+            <a target="_self"> Go To Facebook</a>
+        </h1>
+        <form class="formcontent">
+            <input type="text" placeholder ='Enter your name'>
+            <input type="email" placeholder ='Enter your email'>
+            <input type="password" placeholder ='Enter your password'>
+            <input type="submit" value="submit">
+        </form>
+        <ul>
+            <li class="item" id="ittem1"></li>
+            <li class="item" id="ittem2"></li>
+            <li class="item" id="ittem3"></li>
+            <li class="item" id="ittem4"></li>
+            <li class="item" id="ittem5"></li>
+        </ul>
+    </div>
+    <div>
+        different type of pseudo selector are : 
+        <ul>
+            <li> : hover ->  mouse hover selector</li>
+            <li> :active -> active link selector </li>
+            <li> :focu -> focus selector</li>
+            <li> :link -> link selector</li>
+            <li> :visited -> visited link selector</li>
+            <li>:after -> after element</li>
+            <li> :before -> before element</li>
+            <li> :first-child -> first cihild</li>
+            <li> :first-letter -> first letter </li>
+            <li> :first_letter -> first letter </li>
+            <li> :checked -> checked element selector</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async and await</title>
+</head>
+
+<body>
+    <script>
+        // async await //
+
+
+        // like the below code if we don't want that the statment that are written after the function or in other words if we want to wait for the fetching of the data then we use the await keyword and remember we can only use the await keyword only inside the async function   if we don't await the function then we get the pending promise from our function 
+
+
+        // async function getdata() {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve(455);
+        //         }, 3000);
+        //     })
+        // }
+        async function getdata() {
+            let x= await fetch("url");
+            let data = await x.json();// the conversion of the code that is readed by the js 
+            return data;
+        }
+        async function main() {
+            console.log("hey ");
+            console.log("Welcome to our website");
+            console.log("loading the data");
+            let data = await getdata();
+            console.log(data);
+            console.log("processed data");
+        }
+        main();
+    </script>
+</body>
+
+</html>

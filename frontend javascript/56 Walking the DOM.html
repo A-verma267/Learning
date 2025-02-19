@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Walking the DOM
+
+    <div class="container">
+        <div class="items">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed illum nam facilis?</p>
+        </div>
+        <div class="items">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed illum nam facilis?</p>
+        </div>
+        <div class="items">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed illum nam facilis?</p>
+        </div>
+        <div class="items">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed illum nam facilis?</p>
+        </div>
+        <div class="items">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed illum nam facilis?</p>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Hello</th>
+                <th>hiii</th>
+                <th>heyyyyy</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>one</td>
+                <td>two</td>
+                <td>Three</td>
+            </tr>
+            <tr>
+                <td>Four</td>
+                <td>Five</td>
+                <td>Six</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        // return the whole html page 
+        document.documentElement;
+
+        // we can also excess he particular element by :--
+        document.head, document.html, document.body
+
+        // to excess the children of the document
+        document.body.children
+        // HTMLCollection(8)[div.container, table, script, table, div.​"items", div.​"items", table, script]
+
+        document.body.children[0].firstChild
+        // #text
+
+        document.body.children[0].firstElementChild
+        // < div class=​"items" >​…​</div >
+
+
+        document.body.children[0].lastChild
+        // #text
+
+        document.body.children[0].lastElementChild
+        // < div class=​"items" >​…​</div >
+
+        document.body.children[0].childNodes
+        // NodeList(11)[text, div.items, text, div.items, text, div.items, text, div.items, text, div.items, text]
+
+        document.body.children[0].children
+        // HTMLCollection(5)[div.items, div.items, div.items, div.items, div.items]
+
+
+        document.body.children[0].nextElementSibling
+        // < table >​…​</table >
+
+        document.body.children[2].previousElementSibling
+        // < table >​…​</table >
+
+
+        document.documentElement.parentNode
+        // #document(http://127.0.0.1:5500/56%20Wlaking%20th%20eDOM.html)
+
+        document.documentElement.parentElement
+        null
+
+        document.body.children[2].nextElementSibling
+        // <script><script>
+
+        document.body.children[0].nextElementSibling
+        // <table>​…​</table>​
+
+        document.body.children[0].firstChild
+        // #text
+
+        document.body.children[0].firstElementChild
+        // <div class=​"items">​…​</div>​
+
+        document.body.children[0].lastElementChild
+        // <div class=​"items">​…​</div>​
+
+
+        // DOM manupilation for the table tag
+
+        // this syntax give all the chid of the body tag
+        document.body.childNodes
+        // NodeList(11)[text, div.container, text, table, text, script, text]
+
+        // this syntax give all the children of the body tag which are really a children
+        document.body.children
+        // HTMLCollection(4)[div.container, table, script, script]
+
+        // here we excess the children 1 i.e table
+        document.body.children[1]
+        // <table>​​</table>
+
+        // this return the collection of the rows from the table tag
+        document.body.children[1].rows
+        // HTMLCollection(3)[tr, tr, tr]
+
+        document.body.children[1].caption
+        null
+        document.body.children[1].tHead
+        // < thead>​…​</thead>
+        document.body.children[1].tBodies
+        // it return the collection of all body tags that present in the table
+
+        document.body.children[1].tFoot
+
+
+
+        // excess the first row
+        document.body.children[1].rows[0]
+        // < tr>​…​</tr>
+
+        //return the collections of the cells of the rows i.e th
+        document.body.children[1].rows[0].cells
+        // HTMLCollection(3)[th, th, th]
+
+        // return the index of the tr inside the enclosing element
+        document.body.children[1].rows[0].sectionRowIndex
+        0
+
+        // return the row number starting from the 0
+        document.body.children[1].rows[0].rowIndex
+        0
+
+
+
+        document.body.children[1].tHead.rows[0]
+        // < tr>​…​</tr>
+
+        document.body.children[1].tHead.rows[0].cells
+        // HTMLCollection(3)[th, th, th]
+
+        document.body.children[1].tHead.rows[0].cells[0]
+        // < th> Hello​</th>
+
+        document.body.children[1].tHead.rows[0].cells[0].innerHTML = "heeeee";
+        'heeeee'
+
+        document.body.children[1].tBodies
+        // HTMLCollection[tbody]0: tbodylength: 1[[Prototype]]: HTMLCollection
+
+        document.body.children[1].tBodies[0].rows[0].cells[0].innerHTML = "seven";
+        'seven'
+
+        // return the cell inside enclosing <tr>
+        document.body.children[1].tBodies[0].rows[0].cells[2].cellIndex
+        2
+
+
+
+
+        // Matches / Closest / Contains
+
+        document.body.children
+        // HTMLCollection(4)[div.container, table, script, script]
+        document.body.children[0].children
+        // HTMLCollection(5)[div.items, div.items, div.items, div.items, div.items]
+
+        document.body.children[0].children[0].matches(".items");
+        // true
+
+        document.body.children[0].children[0].matches(".item");
+        // false
+
+        document.body.children[0].children[0].closest(".item");
+        // null
+
+        document.body.children[0].children[0].closest(".items");
+        // <div class="items">​…​</div>
+
+        document.body.children[0].children[0].closest(".container");
+        // <div class="container">​…​</div>
+
+        document.body.children[0].children[0].closest("body");
+        // <body>​…​</body>
+
+        document.body.children[0].children[0].closest("html");
+        // <html lang="en">​<head>​…​</head>​<body>​…​</body>​</html>
+
+        document.body.children[0].contains(document.body.querySelector('.items'));
+        // true
+
+        document.body.children[0].contains(document.body.querySelector('.container'));
+        // true
+
+        document.body.children[0].contains(document.body.querySelector('body'));
+        // false
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise API</title>
+</head>
+<body>
+    <script>
+        // 
+        
+        let pro1 = new Promise((resolve, reject)=>{
+            let num= Math.random();
+            console.log(num);
+            if(num<0.5){
+                reject("this is rejected 1");
+
+            }
+            else{
+                setTimeout(() => {
+                    // console.log("yes i am done 1");
+                    resolve("anshika1");
+                }, 1000);
+            }
+        })
+        let pro2 = new Promise((resolve, reject)=>{
+            let num= Math.random();
+            console.log(num);
+            if(num<0.5){
+                reject("this is rejected 2");
+
+            }
+            else{
+                setTimeout(() => {
+                    // console.log("yes i am done 2");
+                    resolve("anshika2");
+                }, 1000);
+            }
+        })
+        let pro3 = new Promise((resolve, reject)=>{
+            let num= Math.random();
+            console.log(num);
+            if(num<0.5){
+                reject("this is rejected 3");
+
+            }
+            else{
+                setTimeout(() => {
+                    // console.log("yes i am done 3");
+                    resolve("anshika3");
+                }, 1000);
+            }
+        })
+        let pro4 = new Promise((resolve, reject)=>{
+            let num= Math.random();
+            console.log(num);
+            if(num<0.5){
+                reject("this is rejected 4");
+
+            }
+            else{
+                setTimeout(() => {
+                    // console.log("yes i am done 4");
+                    resolve("anshika4");
+                }, 1000);
+            }
+        })
+        let pro5 = new Promise((resolve, reject)=>{
+            let num= Math.random();
+            console.log(num);
+            if(num<0.5){
+                reject("this is rejected 5");
+
+            }
+            else{
+                setTimeout(() => {
+                    // console.log("yes i am done 5");
+                    resolve("anshika5");
+                }, 1000);
+            }
+        })
+        
+        // let p= Promise.all([pro1,pro2,pro3,pro4,pro5]);
+        
+        
+        // above statement will only get executed when all the promises are resolve if anyone of these is rejected then it will console the error and ignore all other resolve promises.
+        // when all the promises are resoved then we get the array of the all statement through which the promise has been resoved 
+
+
+
+        // let p= Promise.allSettled([pro1,pro2,pro3,pro4,pro5]);
+        
+        // this will give the array .. if the promise is resolved then it give the rejected status and its reason to be rejected and if the promise is resolved then it give the array which consist of the status i.e fulfilled and value through wuch it get resoved 
+        
+
+
+        // let p= Promise.race([pro1,pro2,pro3,pro4,pro5]);
+
+        
+        // this is the type of race in between all the promises as the first one which get settle become the outcome whether the promise has been resoved or rejected
+        
+        
+        let p= Promise.any([pro1,pro2,pro3,pro4,pro5]);
+
+        
+        // in this statement the first promise that get resoved will become the outcome .. remember that the promise should be resoved and if the all the promises get rejected then it will give the error
+        
+        // nothing just a resolve and reject statement 
+
+
+        // let p= Promise.resolve("hey");
+        // let p= Promise.reject("hey");
+
+
+
+
+
+
+        p.then((a)=>{
+            
+            console.log(a);
+
+        }).catch((err)=>{
+            
+            console.log(err);
+
+        })
+    </script>
+</body>
+</html>

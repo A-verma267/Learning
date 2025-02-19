@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math object</title>
+</head>
+<body>
+    <div id="math"></div>
+    <script>
+
+        // printing the math object
+
+        let m = Math;
+        // this will give all the formula that present in the math object ;
+
+        console.log(m);
+
+        // printing the constant variable that present in the math object :
+
+        document.getElementById('math').innerHTML= Math.E +"\n "+  Math.PI + "\n"+ Math.LN2 + "\n" +Math.LOG10E+ "\n "+Math.SQRT1_2; 
+
+
+        // printing the function from the math object
+
+        let a= Math.PI;
+        let b = Math.LOG10E;
+
+        console.log("the value of a and b is : ", a,b );
+
+        let c= 23;
+        let d= 34;
+        console.log(" the value of c and d is : ", c, d);
+         
+        console.log(" the roundedd value of a and b is : ", Math.round(a), Math.round(b));
+
+        console.log(" 3 raised o the powe of 2 is : ", Math.pow(3,2));
+        Math.pow()
+        console.log(Math.pow(3,12));
+        console.log(Math.pow(4,3));
+
+        console.log(" square root of 36 is : ", Math.sqrt(36));
+        console.log("Square root of the 9 is: ", Math.sqrt(9));
+
+        // ceil and floor 
+
+        console.log("Ceiling and flooring value of the nummebr 5.8" , Math.ceil(5.8),Math.floor(5.8));
+
+        //abs 
+
+        console.log("Absolute value of 5.66 is :-- " , Math.abs(5.66), Math.abs(-5.66));
+
+        // trigonometric function
+
+        console.log(" the value of sin of pi is :-- ", Math.sin(Math.PI));
+        console.log("The value of the cosine of pi :-- ", Math.cos(Math.PI));
+        console.log("The value of sine of pi/2 :--", Math.sin(Math.PI/2));
+
+//min and max function : 
+
+        console.log(" the minimum value in between the three number 2,3,4", Math.min(2,3,4));
+        console.log("The maximum vakue among three numbers are : ", Math.max(2,3,4));
+
+        // random number
+
+        let r = Math.random();
+        // this will give us a random function in between he 0 to 1;
+
+        console.log("the random number in between 0 to 1 is :-- ", r);
+
+        let a1 = 1;
+        let b1= 100;
+
+        let r1_100= a1+(b1-a1)*Math.random();
+
+        // this will give a random number in between the 1 to 100;
+
+        console.log("The random number in between 1 to 100 is : ", r1_100);
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

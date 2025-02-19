@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json file</title>
+</head>
+<body>
+    <div class="container">
+        hello guys lets study about json (javascript object notation);
+
+    </div>
+    <script>
+        let jsonobj = {name: "anshika ", age :19, occupation : "freelancing "};
+        console.log(jsonobj);
+// stringify convert the object into string ::==  and hencewe can perform all the operation of string on it ;
+        let jsonstring = JSON.stringify(jsonobj);
+        console.log(jsonstring);
+
+        jsonstring= jsonstring.replace("occupation", "degree");
+
+// here parse convert string into the object :::-- 
+
+        let jsonparase = JSON.parse(jsonstring);
+        console.log(jsonparase);
+
+    </script>
+</body>
+</html>

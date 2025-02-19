@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>settime and setdate</title>
+    <style>
+        .contaienr{
+            font-size: 23px;
+            background-color: aqua;
+            color: black;
+            border: 2px solid red;
+            padding: 23px 13px ;
+            margin: 12px 23px ;
+            text-align: center;
+
+
+        }
+        #time{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        current time <span id="time"></span>
+    </div>
+    <script>
+        let now = new Date();
+        console.log(now); // give the date and time at once time 
+
+        let dt = new Date(1000);
+        console.log(dt);
+
+        let dt2= new Date(1975, 6, 23);
+        console.log(dt2);
+
+        // let now = new Date( year , month ,date , hour, minutes,  seconds, milliseconds);
+        let date = new Date(2034 ,3, 14, 12, 23, 34, 45);
+
+        // we can get the element like full year , month , day, date, hr, min seconds by using the get functions as follows :
+
+        console.log(date);
+        let yr= date.getFullYear();
+        console.log(yr);
+
+        let month = date.getMonth();
+        console.log(month);
+
+        let dat = date.getDate();
+        console.log(dat);
+
+        let hr= date.getHours();
+        console.log(hr);
+
+        let min= date.getMinutes();
+        console.log(min);
+
+       let day= date.getDay();
+       console.log(day);
+
+    //    we can also set the time full year month seconds minutes hr and date  by using the set function as follows :-- 
+
+       let newdate = new Date();
+       newdate.setDate(8)
+    //    console.log(newdate);
+    newdate.setFullYear(2019);
+
+       console.log(newdate);
+
+
+function updatetime(){
+    // let time = new Date();
+    // console.log(time);
+    document.getElementById('time').innerHTML= new Date();
+    time.innerHTML= new Date();
+
+}
+setInterval(updatetime, 1000);
+// setTimeout(() => {
+//     console.log("hey happy to see you here!  ")
+// }, 1000);
+setInterval(() => {
+    time.innerHTML= new Date();
+}, 1000);
+    </script>
+</body>
+</html>

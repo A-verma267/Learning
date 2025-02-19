@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        p,.division{                                        /* this css comment and this tagis internal tag*/
+            color:red;
+            background-color: bisque !important;      /* chahye kuch bhi ho agar important likha he to vo hi style ayega */
+        }
+        </style>
+    <link rel="stylesheet" href="externalcss.css">         <!-- internal aur external css me se jo niche likha hota he uski priority jyada hoti he  aur sbse jyada inline css priority hoti he -->
+    <title>tcss</title>      
+</head>
+<body>
+    <!--what is css ?
+    cascading stylesheet 
+    give style to raw html and web pages
+    to make website responsive
+
+    css styles 
+     selector   property    value 
+    p          {color :      blue}
+     selector telss us where we have to apply these property 
+    
+     three types
+     >inline  -> the property is applicable to that particular line.
+     >internal -> the internal css is add in head tag in style tag by defing the selectors. 
+     >external -> to add the external file like by taking the reference.
+
+
+    -->
+
+    <div>
+        <p class="hey" style ="color:red; background-color: blue; " > <!--inline css-->
+            hello this is my paragraph
+        </p>
+    </div>
+    <div class="division">
+        this is s div tag
+    </div>
+    <p>
+        nothig much
+    </p>
+
+</body>
+</html>

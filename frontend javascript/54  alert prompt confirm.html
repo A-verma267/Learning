@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alert prompt and confirm</title>
+</head>
+<body>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit porro, earum perferendis quam maiores libero aliquid neque facere accusantium atque temporibus rerum, iure quis ab deserunt numquam ullam, dolores commodi delectus fugit totam. Officiis ducimus accusamus temporibus? Qui consectetur ullam unde dolore officiis vitae possimus.
+    </div>
+    <script>
+        alert ("you should focus on yourself first ");
+        let name= prompt("wht is our age ? ", "22");
+        
+        if(name ==22){
+            console.log(name);
+
+        }
+        else{
+            console.log(" enter correctly ");
+
+        }
+
+        // Alert is use to give a mesaage or a alert message !!
+        // Alert in in-browser doesn't return anything !!
+        // alert("this is a confidential information ");
+
+        // prompt in js||
+        // let name=prompt("what is your name? ", "guest"); // here guest is the default value we can change it further 
+        // console.log(name);
+
+        // confirm in js||
+
+        let deletepost= confirm("Do you really want to delete this post ?");
+        console.log(deletepost);
+
+        // confirm has boolean return type that if we choose ok then it returm true otherwise false. we can use this in conditionals also that :-- 
+
+        if(deletepost){
+            //code to delete the post ||
+            console.log("your post has been deleted sucessfully");
+
+        }
+        else{
+            // code to cancel the deletion of the post ||
+            console.log("your post is as safe ");
+
+        }
+    </script>
+</body>
+</html>

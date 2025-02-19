@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setinterval and settimeout </title>
+</head>
+
+<body>
+    <div class="container">
+        time now is <span id="time"></span>
+    </div>
+    <!-- settimeout -> is allows us to run the code once after a inteval of time -->
+    <!-- set inteval-> is allows us to run the code as multiple we want to run after a interval of time -->
+    <script>
+    //     console.log("this is a tutorial for the set time out and set interval ");
+    //     function greet(name, byetext) {
+    //         console.log("hey good to see you here again" + " " + name + " " + byetext);
+    //         // prompt("What is your name ?","guest");
+    //     }
+    //    function displaytime(){
+    //     document.getElementById('time').innerHTML= new Date();
+    //    }
+    //    setInterval(displaytime,1000);
+    //     greet("harry","sys");
+    //     setTimeout(greet, 5000, "harry","see you soon");
+        // console.log(time)
+       
+
+        // timeoutid=setTimeout(greet,1000);
+        // console.log(timeoutid);
+
+        // using the cleartimeout function we clear the existence of the settimeout function 
+        // clearTimeout(timeoutid);
+
+        // setTimeout(greet(), 13000 , "harry","sys");  -> this is the wrong syntax for the settimeout function as it is calling the function inside the settimeout , if we increase the time of delay it doesn't effect the website as it gives the output as fast as the website open and also it doesn't argument as parameter if we write then at last 
+
+        // setInterval(greet, 1000, "harry", "how are u doing brother ? ");
+        // setintervalid = setInterval(greet, 5000, "harry", "how are you brother? ");
+        // console.log(setintervalid);
+        // clearInterval(setintervalid);
+
+        // function displaytime(){
+        //     time=new Date();
+        //     console.log(time);
+        //     document.getElementById("time").innerHTML=time;
+        // }
+        // setInterval(displaytime, 1000);
+        // setTimeout(greet, 1000);
+        setInterval(() => {
+            let time =  new Date();
+            document.getElementById("time").innerHTML= time;
+        }, 1000);
+
+    </script>
+
+</body>
+
+</html>
